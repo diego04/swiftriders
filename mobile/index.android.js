@@ -40,11 +40,17 @@ var mobile = React.createClass({
         }
 
         return (
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={this.renderMovie}
-                style={styles.listView}
-                />
+
+            <View style={{flexDirection: 'row', height: 100, padding: 20}}>
+                <View style={{backgroundColor: 'blue', flex: 0.3}} />
+                <View style={{backgroundColor: 'red', flex: 0.5}} />
+
+                <ListView
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderMovie}
+                    style={styles.listView}
+                    />
+            </View>
         );
     },
 
